@@ -15,7 +15,7 @@ pipeline {
            
            steps {
            
-           sh 'docker tag org-api mayanks95/org-api:latest
+           sh 'docker tag org-api mayanks95/org-api:latest'
            sh 'docker tag org-api mayanks95/org-api:BUILD_NUMBER'
            
            }
