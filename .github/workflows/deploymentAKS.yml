@@ -18,10 +18,7 @@ jobs:
       
       
       
-      - name: Use Node 16.15
-        uses: actions/setup-node@v1
-        with:
-         node-version: '16.15' 
+      
       
     
       - name: Setup Go environment
@@ -30,11 +27,7 @@ jobs:
     # The Go version to download (if necessary) and use. Supports semver spec and ranges.
          go-version: 1.19.1
     # Path to the go.mod or go.work file.
-      - name: mod file
-        run: go mod init
-      - name: go build
-        run: go build -o ./org-api
-        
+      
       - name: docker build
         run: docker build -t org-api -f dockerfile .
         
